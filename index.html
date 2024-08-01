@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 <style>
@@ -55,6 +55,15 @@
             <textarea name="text" id="lorem" placeholder="Enter your text" onkeyup="openBracket(event)"></textarea>
             <p class="formParagraf">Holati: <span class="formSpan"></span></p>
         </form>
+    </section>
+    <section class="bg lg">
+    <form class="form">
+        <textarea name="words" id="words" placeholder="Enter your words"></textarea>
+        <input type="text" class="textw" placeholder="Enter your text">
+        <button class="done">Done</button>
+        <p> Result: <span class="wordResult"></span></p>
+        <p> Undefined: <span class="wordResult2"></span></p>
+    </form>
     </section>
     <script src="./app.js"></script>
 </body>

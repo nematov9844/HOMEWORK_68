@@ -61,11 +61,42 @@ const openBracket = (event) => {
   }
 };
 
-
+let textw = document.querySelector(".textw");
+let done = document.querySelector(".done");
+let words = document.getElementById("words");
+done.addEventListener("click", (e) => {
+  e.preventDefault();
+  let result = document.querySelector(".wordResult");
+  let result2 = document.querySelector(".wordResult2");
+  let arr = words.value.split(" ");
+  textw = textw.value.split(" ");
+  let bor = [];
+  let yoq = [];
+  console.log(arr);
+  console.log(textw);
+  for (let i = 0; i < textw.length; i++) {
+    if (arr.includes(textw[i])) {
+      bor.push(textw[i]);
+    } else if (!arr.includes(textw)) {
+      yoq.push(textw[i]);
+    }
+    if (bor.length > 0 && yoq.length > 0) {
+      result2.textContent = `${yoq.join(",")} bu so'zlar yo'q`;
+      result.textContent = `${bor.join(",")} bu so'zlar bor`;
+    } else if (yoq.length > 0) {
+      result2.textContent = `${yoq.join(",")} bu so'zlar yo'q`;
+      result.remove();
+    } else if (bor.length > 0) {
+      result.textContent = `${bor.join(",")} bu so'zlar bor`;
+      result2.remove()
+    }
+  }
+});
+// 
 document.addEventListener('contextmenu', function(e) {
   e.preventDefault();
 });
-
+// 
 document.onkeydown = function(e) {
   if(e.keyCode == 123) { // F12 tugmasi
       return false;
@@ -83,13 +114,13 @@ document.onkeydown = function(e) {
       return false;
   }
 };
-
+// 
 setInterval(function(){
   debugger;
 }, 100);
-
-
+// 
 function decrypt(encodedString) {
   return atob(encodedString);
 }
 eval(decrypt('Y29uc29sZS5sb2coIkJ1IGtvcm9kaW5naXogaGltb3lhbGFuZ2FuIik7'));
+// 

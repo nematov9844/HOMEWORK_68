@@ -51,85 +51,83 @@
   }
 }
 
-.df{
-    .form{
-        width: 400px;
-        height: 300px;
-        background-color: rgb(26, 84, 135);
-        box-shadow: 5px 5px 5px 5px rgba(0, 0, 5, 0.5);
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 40px;
-        color: white;
-        gap: 10px;
-        #textarea{
-            resize: none;
-            outline: none;
-            border: none;
-            border-radius:10px;
-            width: 100%;
-            height: 100px;
-            padding: 10px;
-            color: rgb(7, 46, 91);
-            font-weight: 700;
-            &::placeholder{
-                color: rgb(26, 84, 135);
-                font-weight: 700;
-            }
-        }
-        .formParagraf{
-            color: white;
-            font-weight: 700;
-        }
+.df {
+  .form {
+    width: 400px;
+    height: 300px;
+    background-color: rgb(26, 84, 135);
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 5, 0.5);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 40px;
+    color: white;
+    gap: 10px;
+    #textarea {
+      resize: none;
+      outline: none;
+      border: none;
+      border-radius: 10px;
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      color: rgb(7, 46, 91);
+      font-weight: 700;
+      &::placeholder {
+        color: rgb(26, 84, 135);
+        font-weight: 700;
+      }
     }
-}
-
-.nr{
-.FileSize{
-  width: 400px;
-  height: 150px;
-  background-color: rgb(26, 84, 135);
-  box-shadow: 5px 5px 5px 5px rgba(0, 0, 5, 0.5);
-  border-radius: 10px;
- display: flex;
- padding: 40px;
- justify-content: center;
- align-items: flex-start;
- flex-direction: column;
- gap: 10px;
- color: white;
- font-weight: 700;
- input[type="file"] {
-  display: none;
-}
- .fileLabel{
-  border: 1px solid rgb(26, 84, 135);
-  border-radius:10px;
-  width: 100%;
-  height: 50px;
-  padding: 10px;
-  color: white;
-  font-weight: 700;
-  background-color: rgb(7, 46, 91);
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
-  &::placeholder{
-    color: rgb(26, 84, 135);
-    font-weight: 700;
+    .formParagraf {
+      color: white;
+      font-weight: 700;
+    }
   }
-  
-  
- }
-}
 }
 
-.fd{
-  .form{
+.nr {
+  .FileSize {
+    width: 400px;
+    height: 150px;
+    background-color: rgb(26, 84, 135);
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 5, 0.5);
+    border-radius: 10px;
+    display: flex;
+    padding: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    font-weight: 700;
+    input[type="file"] {
+      display: none;
+    }
+    .fileLabel {
+      border: 1px solid rgb(26, 84, 135);
+      border-radius: 10px;
+      width: 100%;
+      height: 50px;
+      padding: 10px;
+      color: white;
+      font-weight: 700;
+      background-color: rgb(7, 46, 91);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      &::placeholder {
+        color: rgb(26, 84, 135);
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.fd {
+  .form {
     width: 400px;
     height: 150px;
     background-color: rgb(26, 84, 135);
@@ -143,20 +141,75 @@
     color: white;
     gap: 10px;
     font-weight: 700;
-    #lorem{
+    #lorem {
       resize: none;
       outline: none;
       border: none;
-      border-radius:10px;
+      border-radius: 10px;
       width: 100%;
-      height: 50px;  
+      height: 50px;
       padding: 10px;
       color: rgb(7, 46, 91);
       font-weight: 700;
-      &::placeholder{
+      &::placeholder {
         color: rgb(26, 84, 135);
         font-weight: 700;
       }
     }
+  }
+}
+
+.lg {
+  .form {
+    width: 400px;
+    height: 250px;
+    background-color: rgb(26, 84, 135);
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 5, 0.5);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 40px;
+    color: white;
+    gap: 10px;
+    #words {
+      resize: none;
+      outline: none;
+      border: none;
+      border-radius: 10px;
+      width: 100%;
+      height: 50px;
+      padding: 10px;
+      color: rgb(7, 46, 91);
+      font-weight: 700;
+      &::placeholder {
+        color: rgb(26, 84, 135);
+        font-weight: 700;
+      }
+    }
+    input {
+        padding: 3px 5px;
+        outline: none;
+        border-radius: 5px;
+        border: none;
+        color: rgb(7, 46, 91);
+        &::placeholder {
+          color: rgb(26, 84, 135);
+          font-weight: 700;
+        }
+      }
+      .done{
+        width: 60px;
+        height: 20px;
+        border-radius: 6px;
+        border: none;
+        color: rgb(7, 46, 91);
+        font-weight: 700;
+        box-shadow: 0px -3px 3px 3px rgba(0, 0, 0, 0.5) inset;
+        &:focus {
+          box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.5) inset;
+        }
+      }
   }
 }
