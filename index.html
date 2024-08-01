@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<style>
+    .boxResult {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.6s;
+    }
+</style>
+
+<body>
+    <section class="bg">
+        <div class="boxResult"></div>
+        <form class="creatBox">
+            <label for="width">Width:</label>
+            <input type="number" name="width" onkeyup="boxCreator(event)" id="width" placeholder="Enter your Width">
+            <label for="hight">Hight:</label>
+            <input type="number" name="height" onkeyup="boxCreator(event)" id="hight" placeholder="Enter your Hight">
+            <label for="borderRadius">Border Raddius:</label>
+            <input type="number" name="radius" onkeyup="boxCreator(event)" id="borderRadius"
+                placeholder="Enter your Border Raddius">
+            <label for="color">Color:</label>
+            <input type="text" name="color" onkeyup="boxCreator(event)" id="color" placeholder="Enter your Color">
+            <div class="creatBoxAction">
+                <button class="creatBoxActionBtn">Save</button>
+
+            </div>
+        </form>
+    </section>
+    <section class="bg df">
+        <form class="form">
+            <textarea name="text" id="textarea" placeholder="Enter your text" onkeyup="wordLenght(event)"></textarea>
+            <p class="formParagraf">Lenght: <span class="lenght_Result">0</span></p>
+        </form>
+    </section>
+    <section class="bg nr">
+        <form class="FileSize">
+            <label class="fileLabel" for="file">
+                <p class="fileSizeResult">File size: <span class="fileSizeResultSpan">0</span></p>
+            </label>
+            <input type="file" name="file" id="file" onchange="fileSize(event)">
+
+        </form>
+    </section>
+    <section class="bg fd">
+        <form class="form">
+            <textarea name="text" id="lorem" placeholder="Enter your text" onkeyup="openBracket(event)"></textarea>
+            <p class="formParagraf">Holati: <span class="formSpan"></span></p>
+        </form>
+    </section>
+    <script src="./app.js"></script>
+</body>
+
+</html>
