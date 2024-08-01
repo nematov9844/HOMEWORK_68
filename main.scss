@@ -1,0 +1,162 @@
+$primary-color: rgb(26, 84, 135);
+$secondary-color: rgb(7, 46, 91);
+
+@mixin input-styles {
+  resize: none;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  color: $secondary-color;
+  font-weight: 700;
+  &::placeholder {
+    color: $primary-color;
+    font-weight: 700;
+  }
+}
+
+%shared-box {
+  background-color: $primary-color;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 5, 0.5);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 40px;
+  color: white;
+  gap: 10px;
+  font-weight: 700;
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (max-width: 768px) { @content; }
+  } @else if $breakpoint == mobile {
+    @media (max-width: 480px) { @content; }
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.bg {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px 0px;
+  gap: 20px;
+  background: linear-gradient(to right, $primary-color, $secondary-color);
+  @include responsive(mobile) {
+    height: auto;
+    padding: 20px 10px;
+  }
+  .creatBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: white;
+    font-weight: 700;
+    gap: 5px;
+    @include responsive(mobile) {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    input {
+      @include input-styles;
+      padding: 3px 5px;
+    }
+    .creatBoxAction {
+      .creatBoxActionBtn {
+        width: 60px;
+        height: 20px;
+        border-radius: 6px;
+        border: none;
+        color: $secondary-color;
+        font-weight: 700;
+        box-shadow: 0px -3px 3px 3px rgba(0, 0, 0, 0.5) inset;
+        &:focus {
+          box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.5) inset;
+        }
+      }
+    }
+  }
+}
+
+.df .form, .nr .FileSize, .fd .form {
+  @extend %shared-box;
+  width: 400px;
+  @include responsive(tablet) {
+    width: 90%;
+    max-width: 400px;
+  }
+  @include responsive(mobile) {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+.df .form {
+  height: 300px;
+  @include responsive(mobile) {
+    height: auto;
+  }
+  #textarea {
+    @include input-styles;
+    height: 100px;
+    @include responsive(mobile) {
+      height: 80px;
+    }
+  }
+  .formParagraf {
+    color: white;
+    font-weight: 700;
+  }
+}
+
+.nr .FileSize {
+  height: 150px;
+  @include responsive(mobile) {
+    height: auto;
+  }
+  input[type="file"] {
+    display: none;
+  }
+  .fileLabel {
+    border: 1px solid $primary-color;
+    border-radius: 10px;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    color: white;
+    font-weight: 700;
+    background-color: $secondary-color;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include responsive(mobile) {
+      height: auto;
+      min-height: 50px;
+    }
+  }
+}
+
+.fd .form {
+  height: 150px;
+  @include responsive(mobile) {
+    height: auto;
+  }
+  #lorem {
+    @include input-styles;
+    height: 50px;
+  }
+}
